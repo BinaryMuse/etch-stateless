@@ -1,8 +1,6 @@
-export default function stateless (etch, renderFn) {
-  if (typeof etch === 'function') {
-    throw new Error("The first parameter to stateless should be the Etch library")
-  }
+const etch = require('etch')
 
+export default function stateless (renderFn) {
   class EtchStateless {
     constructor (props, children) {
       this.props = props
